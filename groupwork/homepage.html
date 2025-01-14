@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homepage</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .echo-container {
+      position: relative;
+      text-align: center;
+      color: white;
+      background-image: url('https://scontent.fmla3-1.fna.fbcdn.net/v/t1.15752-9/472497456_1370611820566639_8316655223211430051_n.png?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=SuUQKGtJY_cQ7kNvgFtW2lQ&_nc_zt=23&_nc_ht=scontent.fmla3-1.fna&oh=03_Q7cD1gGwmYXH9zOnLmPR__tODlz_1f3iSRWx3J9GDVRRChb7WA&oe=67A89EB8');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .echo-container h1 {
+      font-size: 140px;
+      font-weight: bold;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .echo-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .about-section {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: white;
+    }
+
+    .about-section h2 {
+      font-family: monospace;
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-family: monospace;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .projects-section {
+      background-color: #7F7F7F;
+      padding: 50px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .projects-section h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 40px;
+      color: white;
+    }
+
+    .projects-table {
+      background-color: #7F7F7F;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .project-item {
+      position: relative;
+      text-align: center;
+      border: 1px solid transparent;
+      padding: 10px;
+      max-width: 250px;
+      cursor: pointer;
+    }
+
+    .project-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      filter: grayscale(100%);
+      transition: 0.3s ease;
+    }
+
+    .project-item img:hover {
+      filter: grayscale(0%);
+    }
+
+    .project-item .project-name {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .project-item:hover .project-name {
+      opacity: 1;
+    }
+
+    .project-item.active .project-name {
+      opacity: 1;
+    }
+
+    /* Book Image Styling */
+    .book img {
+      max-width: 60%; 
+      height: auto;
+      display: block;
+      margin: 20px auto; /* Center the image */
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: space-around; /* Spread the icons */
+      align-items: center;
+      height: 60px;
+    }
+
+    .footer a {
+      color: white;
+      font-size: 24px;
+    }
+
+    .footer a:hover {
+      color: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">ECHO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sponsors.html">Sponsors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactform.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Echo Section with Background Image -->
+  <div class="echo-container">
+    <h1>ECHO</h1>
+  </div>
+
+  <!-- About Section -->
+  <div class="about-section">
+    <h2>About ECHO</h2>
+    <p>
+      In a world where voices resonate and leave lasting impressions, ECHO embodies the diverse talents and ideas that define our collective. Much like an echo, we aim to amplify the powerful stories and perspectives that reverberate through our art, ensuring they resonate long after they are experienced. The Exhibition is the culmination of our three-year journey in the BFA in Digital Arts program at the University of Malta. Along this path, we have created projects that explore profound topics, including human rights, culture and heritage, mental health, technology, and the essence of creativity itself.
+      <br><br>
+      ECHO invites you to experience a symphony of digital art mediums, including editorial and graphic design, animation, photography, UI/UX design, mixed media, illustration, fashion design, VR, and video editing. Each piece echoes the individuality of its creator while harmonizing with the collective voice of the group. ECHO is an opportunity to delve into the boundless possibilities of digital art, where every idea resonates and every creation reflects the unique perspectives and innovative approaches of our students. Join us, and let the echoes of creativity inspire and connect us all.
+    </p>
+  </div>
+
+  <!-- Projects Section -->
+  <div class="projects-table">
+    <div class="project-item" onclick="toggleActive(this)">
+      <a href="andreapage.html">
+        <img src="https://scontent.fmla3-1.fna.fbcdn.net/v/t1.15752-9/472620890_2295720234140933_6450271698056370801_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=52LNgR_wxeUQ7kNvgGNVLbh&_nc_zt=23&_nc_ht=scontent.fmla3-1.fna&oh=03_Q7cD1gEB-u8LxhVJrkR-bjo9erc3xwkVs80BZyoVSLqXwBBdNA&oe=67A8CB9D" alt="Project 1">
+        <div class="project-name">Andrea</div>
+      </a>    
+    </div>
+    <div class="project-item" onclick="toggleActive(this)">
+      <a href="fayepage.html"> 
+        <img src="https://scontent.fmla3-1.fna.fbcdn.net/v/t1.15752-9/473220552_1108428504270895_6923916947958596365_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=KRgspNzPedkQ7kNvgEByACu&_nc_zt=23&_nc_ht=scontent.fmla3-1.fna&oh=03_Q7cD1gGMzJq_2n-PON-G3oKCOxfkPOEAP5SmSe9fh5E7l7XzOQ&oe=67A8BEDA" alt="Project 2">
+        <div class="project-name">Faye</div>
+      </a>
+    </div>
+    <div class="project-item" onclick="toggleActive(this)">
+      <a href="karlpage.html"> 
+        <img src="https://scontent.fmla3-1.fna.fbcdn.net/v/t39.30808-6/289411105_1144260909485702_2366797749371819298_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=9OMlN30jiFgQ7kNvgHTpi_z&_nc_zt=23&_nc_ht=scontent.fmla3-1.fna&_nc_gid=Aw-cVq51Zf7Qe98B0K31DHA&oh=00_AYDUMuxxjE9vWApZzHgCffzt5_BgIBIlV0mwC1tkxDWHwA&oe=678715A9" alt="Project 3">
+        <div class="project-name">Karl</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Book Section -->
+  <div class="book">
+    <img src="book.png" alt="Book">
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <a href="#"><i class="bi bi-instagram"></i></a>
+    <a href="#"><i class="bi bi-facebook"></i></a>
+    <a href="#"><i class="bi bi-twitter-x"></i></a>
+    <a href="#"><i class="bi bi-tiktok"></i></a>
+    <a href="#"><i class="bi bi-box-arrow-right"></i></a>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom JavaScript -->
+  <script>
+    function toggleActive(element) {
+      document.querySelectorAll('.project-item').forEach(item => item.classList.remove('active'));
+      element.classList.add('active');
+    }
+  </script>
+</body>
+
+</html>
